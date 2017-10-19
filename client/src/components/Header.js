@@ -32,12 +32,12 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
+      <nav style={{ marginBottom: "30px" }}>
         <div className="nav-wrapper">
           <Link
             to={this.props.auth ? "/surveys" : "/"}
             className="left brand-logo"
-            style={{ margin: "0 10px"}}
+            style={{ margin: "0 10px" }}
           >
             Emaily
           </Link>
