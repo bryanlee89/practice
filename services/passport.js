@@ -7,12 +7,12 @@ const keys = require("../config/keys");
 const User = mongoose.model("users");
 
 passport.serializeUser((user, done) => {
-  console.log("I was called, i am from serializer", user)
+  // console.log("I was called, i am from serializer", user)
   done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-    console.log("I was called, i am from deserializer", id)
+    // console.log("I was called, i am from deserializer", id)
   User.findById(id).then(user => {
     done(null, user);
   });
